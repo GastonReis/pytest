@@ -1,5 +1,6 @@
 import pytest
 from pages.loginPage import LoginPage
+from pages.homePage import HomePage
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -17,3 +18,7 @@ def driver():
 @pytest.fixture
 def loginPage(driver):
     return LoginPage(driver)
+
+@pytest.fixture
+def homepage(driver):
+    return HomePage(driver) 
